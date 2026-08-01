@@ -97,25 +97,20 @@ The assistant uses tool calling to decide when to:
 
 ---
 
-# Project Structure
+## Project Structure
 
-```
-AI-Multimodal-Assistant/
-│
-├── main.py              # FastAPI application and API routes
-├── agent.py             # AI agent logic and tool handling
-├── auth.py              # Authentication functions
-├── database.py          # Supabase database operations
-│
+```text
+AI-multimodal-assistant/
 ├── static/
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
-│
-├── requirements.txt
-├── .env
-├── .gitignore
-└── README.md
+│   └── index.html              # User interface
+├── .env                        # Environment variables (not tracked)
+├── .gitignore                  # Git ignore configuration
+├── agent.py                    # Agent loop, tool calling, image generation & captioning
+├── auth.py                     # Authentication using bcrypt
+├── database.py                 # Supabase CRUD operations
+├── main.py                     # FastAPI server and API endpoints
+├── requirements.txt            # Python dependencies
+└── README.md                   # Project documentation
 ```
 
 ---
